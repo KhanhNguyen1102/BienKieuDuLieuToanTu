@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích chu vi hình tròn</title>
+</head>
+<body>
+  Nhập vào bán kính hỉnh tròn cần tính <br>
+  <input size="2" type="text" id="banKinh"> cm
+  <br>
+  <p id="ketQua"></p>
+  <br>
+  <button id="tinh" onclick="tinhPvaS()">Tính chu vi và diện tích</button>
+<script>
+  function tinhPvaS(){
+  let a = Math.PI;
+  let b = document.getElementById("banKinh").value;
+  let c = parseInt(b);
+  let d = c*c*a;
+  let e = 2*b*a;
+  document.getElementById("ketQua").innerHTML="Chu vi hình tròn là " + e + "cm"+ "<br><br>" + "Diện tích hình tròn là " + d + "cm2";
+    }
+</script>
+</body>
+</html>
