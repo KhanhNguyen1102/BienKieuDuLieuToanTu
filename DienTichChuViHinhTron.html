@@ -16,8 +16,9 @@
   let a = Math.PI;
   let b = document.getElementById("banKinh").value;
   let c = parseInt(b);
-  let d = c*c*a;
-  let e = 2*b*a;
+  let d = (c*c*a).toFixed(2);
+  let e = (2*b*a).toFixed(2);
+
   document.getElementById("ketQua").innerHTML="Chu vi hình tròn là " + e + "cm"+ "<br><br>" + "Diện tích hình tròn là " + d + "cm2";
     }
 </script>
