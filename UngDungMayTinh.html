@@ -10,40 +10,23 @@
 <input type="text" id="input2">
 <br><br>
 
-<button value="cong" onclick="phepCong()">Addition(+)</button>
-<button value="tru" onclick="phepTru()">Subtraction(-)</button>
-<button value="nhan" onclick="phepNhan()">Mutiplication(x)</button>
-<button value="chia" onclick="phepChia()">Division(/)</button>
+<button onclick="calculator('+')">Addition(+)</button>
+<button onclick="calculator('-')">Subtraction(-)</button>
+<button onclick="calculator('*')">Mutiplication(x)</button>
+<button onclick="calculator('/')">Division(/)</button>
 <br> <br>
 
 <p id="ketQua"></p>
 
 <script>
 
-    function phepCong() {
+    function calculator(cal) {
         let a = +document.getElementById("input1").value;
         let b = +document.getElementById("input2").value;
-        let c = a + b;
-        document.getElementById("ketQua").innerHTML="Result addition :" + c;
+
+        document.getElementById("ketQua").innerHTML="Result addition :" + eval(a + cal + b);
     }
-    function phepTru() {
-        let a = +document.getElementById("input1").value;
-        let b = +document.getElementById("input2").value;
-        let c = a - b;
-        document.getElementById("ketQua").innerHTML= " Result subtraction :" + c;
-    }
-    function phepNhan() {
-        let a = +document.getElementById("input1").value;
-        let b = +document.getElementById("input2").value;
-        let c = a * b;
-        document.getElementById("ketQua").innerHTML= " Result mutiplication :" + c;
-    }
-    function phepChia() {
-        let a = +document.getElementById("input1").value;
-        let b = +document.getElementById("input2").value;
-        let c = a / b;
-        document.getElementById("ketQua").innerHTML= " Result division :" + c;
-    }
+
 </script>
 </body>
 
